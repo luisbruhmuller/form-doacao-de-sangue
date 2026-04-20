@@ -3,10 +3,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>doação de sangue</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
         <div id="formulario">
-        <form id="Formsangue" action="registro">
+        <form id="formsangue" action="registro">
             <label for="nome">Digite seu nome:</label>
             <input id="nome" type="text" name="nome" placeholder="nome completo" required>
     
@@ -22,12 +23,26 @@
             <label for="peso">Digite seu peso</label>
             <input id="peso" type="number" name="peso" placeholder="" required>
 
+            <label for="tipo">Qual seu tipo sanguineo?</label>
+            <select id="tipo" name="tipo" required>
+                <option value=""></option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+
+            </select>
+
             <label for="cidade">Digite sua cidade:</label>
             <input id="cidade" type="text" name="cidade" placeholder="xique-xique-BA" required>
     
             <label for="estado">Digite seu estado:</label>
             <input id="estado" type="text" name="estado" placeholder="" required>
-            </div>
+
             <button id="enviar" onclick="verificar_aprovacao">
                 Enviar
             </button>
