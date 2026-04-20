@@ -1,1 +1,38 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doação de sangue</title>
+</head>
+<body>
+        <div id="formulario">
+        <form id="Formsangue" action="registro">
+            <label for="nome">Digite seu nome:</label>
+            <input id="nome" type="text" name="nome" placeholder="nome completo" required>
+    
+            <label for="email">Digite seu email:</label>
+            <input id="email" type="text" name="email" placeholder="exemplo@exemplo.com" required>
+    
+            <label for="telefone">Digite seu numero de telefone</label>
+            <input id="telefone" type="text" name="telefone" placeholder="+00 00000-0000" required>
+    
+            <label for="idade">Digite sua idade</label>
+            <input id="idade" type="number" name="idade" placeholder="" required>
+    
+            <label for="peso">Digite seu peso</label>
+            <input id="peso" type="number" name="peso" placeholder="" required>
 
+            <label for="cidade">Digite sua cidade:</label>
+            <input id="cidade" type="text" name="cidade" placeholder="xique-xique-BA" required>
+    
+            <label for="estado">Digite seu estado:</label>
+            <input id="estado" type="text" name="estado" placeholder="" required>
+            </div>
+            <button id="enviar" onclick="verificar_aprovacao">
+                Enviar
+            </button>
+        </form>
+    </div>
+
+</body>
+</html>
