@@ -1,67 +1,133 @@
+/* Reset básico para começar do zero */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: rgb(136, 0, 0);
-    align-items: center;
+    background-color: #f8f9fa; /* Cinza bem clarinho para o fundo */
     display: flex;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    margin: 0;
+    padding: 20px;
 }
 
+/* Caixa principal do formulário */
 #formulario {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 30px;
+    background-color: #ffffff; /* Branco puro */
     width: 100%;
-    max-width: 500px;
-    color: aliceblue;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 550px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Sombra mais suave */
+    border-top: 6px solid #e63946; /* Vermelho vivo e moderno no topo */
+}
+
+/* Título e ícone */
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.icon {
+    font-size: 32px;
+    margin-bottom: 5px;
 }
 
 h2 {
-    text-align: center;
-    margin-top: 0;
+    color: #1d3557; /* Azul marinho profundo para o título */
+    font-size: 26px;
+    margin-bottom: 5px;
 }
 
+.header p {
+    color: #457b9d; /* Azul acinzentado para o subtítulo */
+    font-size: 15px;
+}
+
+/* Organização dos campos */
 #formsangue {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: block;
 }
 
+.row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.input-group {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+/* Labels e Inputs */
 label {
-    font-weight: bold;
-    margin-top: 5px;
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1d3557; /* Mesmo azul do título */
+    margin-bottom: 6px;
+    text-transform: uppercase; /* Deixa o rótulo mais elegante */
+    letter-spacing: 0.5px;
 }
 
 input, select {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
     width: 100%;
+    padding: 12px;
+    border: 2px solid #e9ecef; /* Borda bem clara */
+    border-radius: 8px;
+    font-size: 15px;
+    color: #495057;
+    background-color: #f1f3f5; /* Fundo levemente cinza nos campos */
 }
 
+/* Mudar a cor da borda ao clicar no campo */
+input:focus, select:focus {
+    outline: none;
+    border-color: #e63946; /* Borda fica vermelha ao clicar */
+    background-color: #ffffff;
+}
+
+/* Botão de enviar */
 #enviar {
-    border-radius: 10px;
-    padding: 12px;
-    margin-top: 20px;
-    background-color: #ff4d4d;
+    width: 100%;
+    background-color: #e63946; /* Vermelho principal */
     color: white;
     border: none;
+    padding: 14px;
+    font-size: 16px;
     font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background 0.3s;
+    margin-top: 10px;
+    transition: background-color 0.2s;
 }
 
+/* Efeito simples de mudar a cor ao passar o mouse */
 #enviar:hover {
-    background-color: #cc0000;
+    background-color: #d62828; /* Vermelho um pouco mais escuro */
 }
 
+/* Texto de confirmação */
 #lista-doadores {
-    margin-top: 20px;
+    margin-top: 25px;
     text-align: center;
+    color: #2b9348; /* Verde sucesso */
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Ajuste para telas pequenas (celular) */
+@media (max-width: 480px) {
+    .row {
+        display: block;
+    }
+    
+    .input-group {
+        margin-bottom: 10px;
+    }
 }
